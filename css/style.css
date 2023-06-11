@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.3098039216);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+.header .logo {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 254);
+  transition: all 0.5s;
+}
+.header .logo:hover {
+  color: rgb(183, 236, 236);
+}
+.header .logo a {
+  display: inline-block;
+  width: 100%;
+}
+.header .logo a img {
+  width: 100%;
+}
+.header ul {
+  display: flex;
+}
+.header ul li {
+  margin: 10px;
+  font-size: 20px;
+}
+.header ul li a {
+  transition: all 0.5s;
+  color: white;
+  padding: 5px;
+}
+.header ul li a:hover {
+  color: rgb(183, 236, 236);
+}
+
+.heroSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(/image/bg2.jpg) 100% 100%;
+  background-size: 100% 100%;
+}
+.heroSection .features {
+  font-size: 22px;
+  letter-spacing: 2.2px;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+.heroSection .rahulSuthar {
+  font-size: 8vw;
+  color: white;
+}
+
+.project {
+  height: 100vh;
+  background-image: linear-gradient(to right, #0b0b0c, #000000);
+  color: white;
+  background: url(/image/bg3.jpg) 100% 100%;
+  background-size: 100% 100%;
+}
+.project hr {
+  width: 30%;
+  text-align: right;
+  margin-right: 0;
+}
+.project .container {
+  border-top: 2px solid white;
+  position: relative;
+}
+.project .container h2 {
+  position: absolute;
+}/*# sourceMappingURL=style.css.map */

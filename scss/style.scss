@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import './resests';
+
+$primary-color: black;
+
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+// Header
+
+.header {
+    background-color: #0000004f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(16px);
+
+    .logo {
+        width: 80px;
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 254);
+        transition: all .5s;
+
+        &:hover {
+
+            color: rgb(183, 236, 236);
+
+
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            margin: 10px;
+            font-size: 20px;
+
+            a {
+                transition: all .5s;
+                color: white;
+
+                padding: 5px;
+
+                &:hover {
+
+                    color: rgb(183, 236, 236);
+
+                }
+            }
+        }
+    }
+
+}
+
+// Hero-Section
+
+.heroSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: rgb(8, 8, 8);
+    background: url(/image/bg2.jpg) 100% 100%;
+
+    background-size: 100% 100%;
+
+    .features {
+        font-size: 22px;
+        letter-spacing: 2.2px;
+        font-family: 'Source Code Pro', monospace;
+        color: white;
+    }
+
+    .rahulSuthar {
+        font-size: 8vw;
+        color: white;
+    }
+}
+
+.project {
+    height: 100vh;
+    background-image: linear-gradient(to right, #0b0b0c, #000000);
+    color: white;
+    background: url(/image/bg3.jpg) 100% 100%;
+
+    background-size: 100% 100%;
+
+    // display: flex;
+    hr {
+        width: 30%;
+        text-align: right;
+        margin-right: 0;
+    }
+
+    .container {
+        border-top: 2px solid white;
+        position: relative;
+
+        h2 {
+            position: absolute;
+        }
+    }
+
+}
