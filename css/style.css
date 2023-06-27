@@ -80,7 +80,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(/image/bg2.jpg) 100% 100%;
+  background: url(../image/bg2.jpg) 100% 100%;
   background-size: 100% 100%;
 }
 .heroSection .features {
