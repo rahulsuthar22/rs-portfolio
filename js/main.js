@@ -1,2 +1,2 @@
-console.log("This is running properly")
+console.log("This is running properly");
 

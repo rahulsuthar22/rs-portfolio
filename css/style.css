@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Source+Code+Pro&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 a {
@@ -16,7 +16,7 @@ li {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.3098039216);
+  background-color: rgba(30, 27, 27, 0.31);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -27,39 +27,51 @@ li {
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
 }
-.header .logo {
-  width: 80px;
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 254);
-  transition: all 0.5s;
-}
-.header .logo:hover {
-  color: rgb(183, 236, 236);
-}
 .header .logo a {
   display: inline-block;
   width: 100%;
+  color: white;
+  font-size: 24px;
+  transition: all 0.5s;
+  font-weight: bold;
 }
-.header .logo a img {
-  width: 100%;
+.header .logo a:hover {
+  color: chocolate;
 }
-.header ul {
+.header nav > ul {
   display: flex;
 }
-.header ul li {
-  margin: 10px;
+.header nav > ul li {
+  margin: 20px;
   font-size: 20px;
 }
-.header ul li a {
+.header nav > ul li a {
   transition: all 0.5s;
   color: white;
   padding: 5px;
+  font-weight: bold;
+  color: gray;
 }
-.header ul li a:hover {
-  color: rgb(183, 236, 236);
+.header nav > ul li a:hover {
+  color: chocolate;
+}
+
+.socialMedia {
+  display: flex;
+}
+.socialMedia li {
+  margin: 10px;
+  font-size: 20px;
+}
+.socialMedia li a {
+  transition: all ease 0.3s;
+  transition: all 0.5s;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.socialMedia li a:hover {
+  color: chocolate;
 }
 
 .heroSection {
@@ -73,26 +85,40 @@ li {
 }
 .heroSection .features {
   font-size: 22px;
-  letter-spacing: 2.2px;
+  letter-spacing: 2px;
   font-family: "Source Code Pro", monospace;
-  color: white;
+  color: gray;
+  border-bottom: 2px solid gray;
 }
 .heroSection .rahulSuthar {
   font-size: 8vw;
+  color: chocolate;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+.heroSection .heroBtn {
+  margin-top: 30px;
+  padding: 24px 20px;
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: gray;
+  margin-right: 10px;
+  border: 2px solid gray;
+}
+.button:hover {
   color: white;
+  font-weight: 500;
+  border: 2px solid chocolate;
 }
 
 .project {
-  height: 100vh;
   background-image: linear-gradient(to right, #0b0b0c, #000000);
   color: white;
-  background: url(/image/bg3.jpg) 100% 100%;
-  background-size: 100% 100%;
-}
-.project hr {
-  width: 30%;
-  text-align: right;
-  margin-right: 0;
 }
 .project .container {
   border-top: 2px solid white;
@@ -100,4 +126,159 @@ li {
 }
 .project .container h2 {
   position: absolute;
+}
+.project .scrollSymbol {
+  width: 20px;
+  margin: auto;
+  margin-top: -100px;
+}
+
+.sectionWrapper {
+  padding-top: 100px;
+}
+
+.headingCtnr {
+  text-align: center;
+}
+
+.headingTwo {
+  font-size: 3em;
+  display: inline-block;
+  position: relative;
+  border-bottom: 4px solid chocolate;
+}
+
+.projectGrid {
+  padding-top: 50px;
+  width: 90vw;
+  margin: auto;
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+.projectGrid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.projectGrid .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.projectGrid .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .projectGrid .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .projectGrid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.projectGrid .imgBox {
+  position: relative;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s ease;
+  text-align: center;
+}
+.projectGrid .imgBox .overlay {
+  transition: all 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: start;
+}
+.projectGrid .imgBox .overlay h5 {
+  padding-top: 5px;
+}
+.projectGrid .imgBox .overlay p {
+  font-size: 12px;
+  padding: 5px 0;
+}
+.projectGrid .imgBox:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.projectGrid .imgBox:hover img {
+  opacity: 0.8;
+}
+.projectGrid .imgBox:hover .overlay {
+  padding: 10px;
+  background-color: rgba(253, 251, 251, 0.9019607843);
+  opacity: 1;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.977);
+  background-color: #2d2d2d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(36, 31, 31);
+  outline: 1px solid rgb(5, 5, 5);
+  border-radius: 10px;
+}
+
+#section10 a {
+  padding-top: 58px;
+  position: relative;
+  top: 20vh;
+}
+
+#section10 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid gray;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#section10 a span:hover {
+  border-color: white;
+}
+
+#section10 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: chocolate;
+  border-radius: 100%;
+  animation: sdb10 2s infinite;
+  box-sizing: border-box;
+}
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
