@@ -4,4 +4,13 @@
   font-family: "League Spartan", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  transition: all ease 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }

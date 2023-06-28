@@ -5,6 +5,7 @@
   font-family: "League Spartan", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  transition: all ease 0.3s;
 }
 
 a {
@@ -13,208 +14,6 @@ a {
 
 li {
   list-style: none;
-}
-
-.header {
-  background-color: rgba(30, 27, 27, 0.31);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-}
-.header .logo a {
-  display: inline-block;
-  width: 100%;
-  color: white;
-  font-size: 24px;
-  transition: all 0.5s;
-  font-weight: bold;
-}
-.header .logo a:hover {
-  color: chocolate;
-}
-.header nav > ul {
-  display: flex;
-}
-.header nav > ul li {
-  margin: 20px;
-  font-size: 20px;
-}
-.header nav > ul li a {
-  transition: all 0.5s;
-  color: white;
-  padding: 5px;
-  font-weight: bold;
-  color: gray;
-}
-.header nav > ul li a:hover {
-  color: chocolate;
-}
-
-.socialMedia {
-  display: flex;
-}
-.socialMedia li {
-  margin: 10px;
-  font-size: 20px;
-}
-.socialMedia li a {
-  transition: all ease 0.3s;
-  transition: all 0.5s;
-  color: white;
-  padding: 5px;
-  font-weight: bold;
-}
-.socialMedia li a:hover {
-  color: chocolate;
-}
-
-.heroSection {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url(../image/bg2.jpg) 100% 100%;
-  background-size: 100% 100%;
-}
-.heroSection .features {
-  font-size: 22px;
-  letter-spacing: 2px;
-  font-family: "Source Code Pro", monospace;
-  color: gray;
-  border-bottom: 2px solid gray;
-}
-.heroSection .rahulSuthar {
-  font-size: 8vw;
-  color: chocolate;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-}
-.heroSection .heroBtn {
-  margin-top: 30px;
-  padding: 24px 20px;
-  border-radius: 5px;
-}
-
-.button {
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: gray;
-  margin-right: 10px;
-  border: 2px solid gray;
-}
-.button:hover {
-  color: white;
-  font-weight: 500;
-  border: 2px solid chocolate;
-}
-
-.project {
-  background-image: linear-gradient(to right, #0b0b0c, #000000);
-  color: white;
-}
-.project .container {
-  border-top: 2px solid white;
-  position: relative;
-}
-.project .container h2 {
-  position: absolute;
-}
-.project .scrollSymbol {
-  width: 20px;
-  margin: auto;
-  margin-top: -100px;
-}
-
-.sectionWrapper {
-  padding-top: 100px;
-}
-
-.headingCtnr {
-  text-align: center;
-}
-
-.headingTwo {
-  font-size: 3em;
-  display: inline-block;
-  position: relative;
-  border-bottom: 4px solid chocolate;
-}
-
-.projectGrid {
-  padding-top: 50px;
-  width: 90vw;
-  margin: auto;
-  /* Create four equal columns that sits next to each other */
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-}
-.projectGrid .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-.projectGrid .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-.projectGrid .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-@media screen and (max-width: 800px) {
-  .projectGrid .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .projectGrid .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-.projectGrid .imgBox {
-  position: relative;
-  color: rgb(0, 0, 0);
-  transition: all 0.5s ease;
-  text-align: center;
-}
-.projectGrid .imgBox .overlay {
-  transition: all 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: start;
-}
-.projectGrid .imgBox .overlay h5 {
-  padding-top: 5px;
-}
-.projectGrid .imgBox .overlay p {
-  font-size: 12px;
-  padding: 5px 0;
-}
-.projectGrid .imgBox:hover {
-  transform: scale(1.05);
-  z-index: 1;
-}
-.projectGrid .imgBox:hover img {
-  opacity: 0.8;
-}
-.projectGrid .imgBox:hover .overlay {
-  padding: 10px;
-  background-color: rgba(253, 251, 251, 0.9019607843);
-  opacity: 1;
 }
 
 body::-webkit-scrollbar {
@@ -281,4 +80,295 @@ body::-webkit-scrollbar-thumb {
   100% {
     opacity: 0;
   }
+}
+.header {
+  background-color: rgba(30, 27, 27, 0.31);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+.header nav > ul {
+  display: flex;
+}
+.header nav > ul li {
+  margin: 20px;
+  font-size: 20px;
+}
+.header nav > ul li a {
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
+.header nav > ul li a:hover {
+  color: chocolate;
+}
+
+.logo a {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo a:hover {
+  color: chocolate;
+}
+
+.socialMedia {
+  display: flex;
+}
+.socialMedia li {
+  margin: 10px;
+  font-size: 20px;
+}
+.socialMedia li a {
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+.socialMedia li a:hover {
+  color: chocolate;
+}
+
+.heroSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../image/bg2.jpg) 100% 100%;
+  background-size: 100% 100%;
+}
+.heroSection .features {
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: "Source Code Pro", monospace;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid chocolate;
+}
+.heroSection .rahulSuthar {
+  font-size: 8vw;
+  color: chocolate;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.heroSection .heroBtn {
+  margin-top: 30px;
+  padding: 24px 20px;
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: gray;
+  margin-right: 10px;
+  border: 2px solid gray;
+}
+.button:hover {
+  color: white;
+  font-weight: 500;
+  border: 2px solid chocolate;
+}
+
+.project {
+  background-image: linear-gradient(to right, #0b0b0c, #000000);
+  color: white;
+}
+.project .container {
+  border-top: 2px solid white;
+  position: relative;
+}
+.project .container h2 {
+  position: absolute;
+}
+.project .scrollSymbol {
+  width: 20px;
+  margin: auto;
+  margin-top: -100px;
+}
+
+.sectionWrapper {
+  padding: 100px;
+}
+
+.headingCtnr {
+  text-align: center;
+}
+
+.headingTwo {
+  font-size: 3em;
+  display: inline-block;
+  position: relative;
+  border-bottom: 4px solid chocolate;
+}
+
+.projectGrid {
+  padding-top: 50px;
+  margin: auto;
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+.projectGrid .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.projectGrid .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.projectGrid .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .projectGrid .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .projectGrid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+.projectGrid .imgBox {
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.projectGrid .imgBox .overlay {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: start;
+}
+.projectGrid .imgBox .overlay h5 {
+  padding-top: 5px;
+}
+.projectGrid .imgBox .overlay p {
+  font-size: 12px;
+  padding: 5px 0;
+}
+.projectGrid .imgBox:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+.projectGrid .imgBox:hover img {
+  opacity: 0.8;
+}
+.projectGrid .imgBox:hover .overlay {
+  padding: 10px;
+  background-color: rgba(253, 251, 251, 0.9019607843);
+  opacity: 1;
+}
+
+#about {
+  background: black;
+  color: white;
+}
+#about .part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about .part img {
+  width: 230px;
+}
+#about .part .aboutDesc {
+  padding: 0 20px;
+}
+#about .part .aboutDesc h3 {
+  font-size: 44px;
+  padding: 20px 0;
+  color: chocolate;
+}
+#about .part .aboutDesc p {
+  font-size: 20px;
+  padding-bottom: 30px;
+  line-height: 1.2em;
+}
+
+#skills {
+  background-color: rgb(8, 7, 7);
+  color: white;
+}
+#skills .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+#skills .card {
+  padding: 20px;
+  font-size: 30px;
+  border: 2px solid chocolate;
+}
+
+#contact {
+  background-color: #171721;
+  color: white;
+}
+#contact .contactForm {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.inputs input {
+  width: 49%;
+}
+
+.formEle {
+  padding: 10px;
+  outline: none;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #000;
+  border: none;
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: transparent;
+}
+
+footer {
+  display: flex;
+  padding: 40px 100px;
+  background-color: #101019;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+#success {
+  color: green;
+  font-size: 18px;
+  position: relative;
+  top: 10px;
 }/*# sourceMappingURL=style.css.map */
