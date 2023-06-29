@@ -33,19 +33,26 @@
   z-index: 2;
   backdrop-filter: blur(30px);
 
-  nav > ul {
-    display: flex;
+  #hemburger {
+    display: none;
+  }
+}
+nav > ul {
+  display: flex;
 
-    li {
-      margin: 20px;
-      font-size: 20px;
+  li {
+    margin: 20px;
+    font-size: 2vw;
 
-      a {
-        @include a-tag;
-        color: white;
-      }
+    a {
+      @include a-tag;
+      color: white;
     }
   }
+}
+
+.navigation {
+  display: none;
 }
 
 .logo {
@@ -53,7 +60,7 @@
     display: inline-block;
     width: 100%;
     color: white;
-    font-size: 24px;
+    font-size: 2.5vw;
     font-weight: bold;
     &:hover {
       color: chocolate;
@@ -64,7 +71,7 @@
   display: flex;
   li {
     margin: 10px;
-    font-size: 20px;
+    font-size: 2vw;
 
     a {
       @include a-tag;
@@ -85,7 +92,7 @@
   background-size: 100% 100%;
 
   .features {
-    font-size: 22px;
+    font-size: 1.7vw;
     letter-spacing: 2px;
     font-family: "Source Code Pro", monospace;
     color: rgb(255, 255, 255);
@@ -107,7 +114,7 @@
 .button {
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1.7vw;
   color: gray;
   margin-right: 10px;
   border: 2px solid gray;
@@ -241,12 +248,12 @@
     .aboutDesc {
       padding: 0 20px;
       h3 {
-        font-size: 44px;
+        font-size: 45px;
         padding: 20px 0;
         color: chocolate;
       }
       p {
-        font-size: 20px;
+        font-size: 25px;
         padding-bottom: 30px;
         line-height: 1.2em;
       }
@@ -293,10 +300,10 @@
 }
 
 .formEle {
-  padding: 10px;
+  padding: 15px;
   outline: none;
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 28px;
   border-radius: 5px;
   background: #000;
   border: none;
@@ -323,4 +330,335 @@ footer {
   font-size: 18px;
   position: relative;
   top: 10px;
+}
+
+// carosel
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.next {
+  right: 10px;
+  cursor: pointer;
+}
+
+//responsive
+$laptopL: 1440px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobileL: 425px;
+$mobileM: 375px;
+$mobileS: 320px;
+
+@media screen and (max-width: $laptop) {
+  nav > ul {
+    li {
+      margin: 15px;
+    }
+  }
+  #about {
+    .part {
+      .aboutDesc {
+        h3 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  #skills {
+    .card {
+      padding: 15px;
+      font-size: 20px;
+    }
+  }
+
+  .formEle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header {
+    justify-content: space-between;
+    padding: 4vw;
+    nav {
+      display: none;
+    }
+    .socialMedia {
+      display: none;
+    }
+
+    #hemburger {
+      display: flex;
+      flex-direction: column;
+      width: 50px;
+      cursor: pointer;
+
+      span {
+        background: #fff;
+        border-radius: 10px;
+        height: 2px;
+        margin: 2px 0;
+
+        transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      }
+
+      span:nth-of-type(1) {
+        width: 20%;
+      }
+
+      span:nth-of-type(2) {
+        width: 48%;
+      }
+
+      span:nth-of-type(3) {
+        width: 30%;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+        transform-origin: bottom;
+        transform: rotatez(44deg) translate(3px, -1px);
+      }
+
+      input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+        transform-origin: top;
+        transform: rotatez(-45deg);
+      }
+
+      input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+        transform-origin: bottom;
+        width: 30%;
+        transform: translate(8px, -3px) rotatez(45deg);
+      }
+    }
+  }
+
+  .heroSection {
+    .heroBtn {
+      margin-top: 10px;
+    }
+    .rahulSuthar {
+      font-size: 75px;
+    }
+    .features {
+      font-size: 16px;
+      border-bottom: 1px solid chocolate;
+    }
+  }
+  .sectionWrapper {
+    padding: 100px 60px;
+  }
+
+  .button {
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: 1px solid chocolate;
+    &:hover {
+      border: 1px solid chocolate;
+    }
+  }
+  #section10 a span {
+    width: 20px;
+    height: 30px;
+    &::before {
+      top: 1px;
+      left: 50%;
+      content: "";
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all ease-in 0.5s;
+
+    nav > ul li {
+      margin: 20px;
+      font-size: 3vw;
+    }
+  }
+  .socialMedia li {
+    font-size: 3vw;
+    margin: 20px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  .sectionWrapper {
+    padding: 100px 40px;
+  }
+  .headingTwo {
+    font-size: 40px;
+    border-bottom: 2px solid chocolate;
+  }
+  .logo a {
+    font-size: 3vw;
+  }
+
+  #about .part .aboutDesc p {
+    font-size: 15px;
+  }
+  #about .part .aboutDesc h3 {
+    font-size: 25px;
+  }
+  .formEle {
+    font-size: 15px;
+    padding: 10px;
+  }
+  footer {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo a {
+    font-size: 25px;
+  }
+  .navigation nav > ul li {
+    margin: 15px;
+    font-size: 20px;
+  }
+  .socialMedia li {
+    font-size: 20px;
+    margin: 10px;
+  }
+  .heroSection .rahulSuthar {
+    font-size: 50px;
+  }
+  .heroSection .features {
+    font-size: 10px;
+  }
+  #skills {
+    .cards {
+      justify-content: center;
+    }
+    .card {
+      margin: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileL) {
+  .header {
+    height: 50px;
+    padding: 15px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+  nav > ul {
+    flex-direction: column;
+    li {
+      font-size: 10px;
+    }
+  }
+
+  .sectionWrapper {
+    padding: 60px 20px;
+  }
+  .headingTwo {
+    font-size: 20px;
+    border-bottom: 1px solid chocolate;
+  }
+  #about .part {
+    flex-direction: column;
+  }
+  .inputs {
+    flex-direction: column;
+    input {
+      width: 100%;
+    }
+  }
+  .formEle {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 12px;
+  }
+  footer {
+    padding: 15px 20px;
+  }
+  .details {
+    font-size: 10px;
+  }
+
+  #skills {
+    .cards {
+      padding-top: 20px;
+    }
+    .card {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  #contact .contactForm {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: $mobileM) {
+  .heroSection {
+    .rahulSuthar {
+      font-size: 25px;
+    }
+    .features {
+      width: 140px;
+      text-align: center;
+      font-size: 8px;
+    }
+  }
 }
