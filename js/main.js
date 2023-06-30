@@ -32,6 +32,8 @@ let prevBtn = document.querySelector(".carousel-control.prev");
 let nextBtn = document.querySelector(".carousel-control.next");
 let carouselItemWidth;
 let currentIndex = 0;
+carouselItemWidth =
+  carouselContainer.querySelector(".carousel-item").offsetWidth;
 
 window.onresize = () => {
   carouselItemWidth =
