@@ -3,11 +3,11 @@ console.log("This is running properly");
 let form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let first_name = document.getElementById("name").value;
+  let from_name = document.getElementById("name").value;
   let email_id = document.getElementById("email").value;
   let message = document.getElementById("message").value;
   let params = {
-    first_name,
+    from_name,
     email_id,
     message,
   };
@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
   // Emailjs
   emailjs.send("service_9hc77bb", "template_aiy2qkm", params).then((res) => {
     if (res.status == 200) {
-      let success = `Hey ${first_name}! Your email is successfully sent.`;
+      let success = `Hey ${from_name}! Your email is successfully sent.`;
       document.getElementById("success").innerText = success;
       setTimeout(() => {
         document.getElementById("success").innerText = "";

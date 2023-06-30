@@ -6,6 +6,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   transition: all ease 0.3s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -181,10 +182,12 @@ nav > ul li a:hover {
   margin-right: 10px;
   border: 2px solid gray;
 }
-.button:hover {
-  color: white;
-  font-weight: 500;
-  border: 2px solid chocolate;
+@media (hover: hover) {
+  .button:hover {
+    color: white;
+    font-weight: 500;
+    border: 2px solid chocolate;
+  }
 }
 
 .project {
@@ -511,9 +514,6 @@ footer {
     font-size: 20px;
     border: 1px solid chocolate;
   }
-  .button:hover {
-    border: 1px solid chocolate;
-  }
   #section10 a span {
     width: 20px;
     height: 30px;
@@ -532,6 +532,7 @@ footer {
     background: #000;
     width: 100vw;
     height: 100vh;
+    bottom: 1000px;
     justify-content: center;
     align-items: center;
     z-index: 1;

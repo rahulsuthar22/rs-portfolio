@@ -118,11 +118,12 @@ nav > ul {
   color: gray;
   margin-right: 10px;
   border: 2px solid gray;
-
-  &:hover {
-    color: white;
-    font-weight: 500;
-    border: 2px solid chocolate;
+  @media (hover: hover) {
+    &:hover {
+      color: white;
+      font-weight: 500;
+      border: 2px solid chocolate;
+    }
   }
 }
 
@@ -325,6 +326,7 @@ footer {
   align-items: center;
   color: white;
 }
+
 #success {
   color: green;
   font-size: 18px;
@@ -497,9 +499,6 @@ $mobileS: 320px;
     padding: 10px 15px;
     font-size: 20px;
     border: 1px solid chocolate;
-    &:hover {
-      border: 1px solid chocolate;
-    }
   }
   #section10 a span {
     width: 20px;
@@ -520,6 +519,7 @@ $mobileS: 320px;
     background: #000;
     width: 100vw;
     height: 100vh;
+    bottom: 1000px;
     justify-content: center;
     align-items: center;
     z-index: 1;
